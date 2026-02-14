@@ -4,8 +4,9 @@ namespace App\Repositories;
 
 use App\Models\Product;
 use App\Models\ProductAttributeValue;
+use App\Interfaces\ProductRepositoryInterface;
 
-class ProductRepository
+class ProductRepository implements ProductRepositoryInterface
 {
     public function create(array $data): Product
     {

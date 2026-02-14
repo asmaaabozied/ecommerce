@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Repositories\CategoryRepository;
-use App\Repositories\ProductRepository;
+use App\Interfaces\CategoryRepositoryInterface;
+use App\Interfaces\ProductRepositoryInterface;
 use Illuminate\Validation\ValidationException;
 
 class ProductService
@@ -11,7 +11,7 @@ class ProductService
     protected $categoryRepo;
     protected $productRepo;
 
-    public function __construct(CategoryRepository $categoryRepo, ProductRepository $productRepo)
+    public function __construct(CategoryRepositoryInterface $categoryRepo, ProductRepositoryInterface $productRepo)
     {
         $this->categoryRepo = $categoryRepo;
         $this->productRepo = $productRepo;
